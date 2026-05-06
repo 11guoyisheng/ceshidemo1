@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>用户登录</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="login-shell">
+      <section class="brand-panel" aria-label="产品信息">
+        <div class="brand-mark" aria-hidden="true">A</div>
+        <div class="brand-copy">
+          <p class="eyebrow">ACCOUNT CENTER</p>
+          <h1>欢迎回来</h1>
+          <p>统一管理账号、权限与业务数据，快速进入你的工作台。</p>
+        </div>
+        <div class="visual-board" aria-hidden="true">
+          <span class="visual-line line-a"></span>
+          <span class="visual-line line-b"></span>
+          <span class="visual-line line-c"></span>
+          <span class="visual-chip chip-a"></span>
+          <span class="visual-chip chip-b"></span>
+          <span class="visual-chip chip-c"></span>
+        </div>
+      </section>
+
+      <section class="login-panel" aria-label="登录表单">
+        <div class="login-header">
+          <p class="eyebrow">SIGN IN</p>
+          <h2>登录账号</h2>
+          <p>请输入账号信息继续访问系统。</p>
+        </div>
+
+        <form class="login-form" id="loginForm" novalidate>
+          <label class="field" for="account">
+            <span>账号</span>
+            <input
+              id="account"
+              name="account"
+              type="text"
+              autocomplete="username"
+              placeholder="手机号 / 邮箱 / 用户名"
+              required
+            />
+            <small class="error-text" data-error-for="account"></small>
+          </label>
+
+          <label class="field" for="password">
+            <span>密码</span>
+            <div class="password-wrap">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                placeholder="请输入登录密码"
+                minlength="6"
+                required
+              />
+              <button class="icon-button" type="button" id="togglePassword" aria-label="显示密码">
+                <span class="eye-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+            <small class="error-text" data-error-for="password"></small>
+          </label>
+
+          <div class="form-row">
+            <label class="remember">
+              <input type="checkbox" name="remember" />
+              <span>记住我</span>
+            </label>
+            <a href="#" class="text-link">忘记密码？</a>
+          </div>
+
+          <button class="primary-button" type="submit">登录</button>
+          <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="register-tip">
+          还没有账号？
+          <a href="#" class="text-link">立即注册</a>
+        </p>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
